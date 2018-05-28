@@ -55,7 +55,11 @@ public class Principal_Administrador extends JFrame {
 		principalAdministrador = new JPanel();
 		principalAdministrador.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(principalAdministrador);
+		setLocationRelativeTo(null);
 		principalAdministrador.setLayout(null);
+		
+		
+//Painel de cadastro ========================================================================================================================================
 		
 		JPanel pnlCadastro = new JPanel();
 		pnlCadastro.setVisible(false);

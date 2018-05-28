@@ -52,37 +52,12 @@ public class Login extends JFrame {
 		telaLogin.setName("Mercado\r\n");
 		telaLogin.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(telaLogin);
+		setLocationRelativeTo(null);
 		telaLogin.setLayout(null);
 		
-		JPanel cxErro = new JPanel();
-		cxErro.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		cxErro.setVisible(false);
-		cxErro.setBounds(91, 73, 245, 97);
-		telaLogin.add(cxErro);
-		cxErro.setLayout(null);
-		
-		JLabel lblErro = new JLabel("Usuario ou senha incorreto");
-		lblErro.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblErro.setBounds(15, 16, 215, 20);
-		cxErro.add(lblErro);
-		
-		JButton btnErro = new JButton("Entendi");
-		btnErro.addActionListener(new ActionListener() {
-			//Ação do botão
-			public void actionPerformed(ActionEvent arg0) {
-				cxErro.setVisible(false);
-				txtLogin.setText("");
-				txtSenha.setText("");
-			}
-		});
-		btnErro.setBorder(new LineBorder(Color.GRAY, 1, true));
-		btnErro.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnErro.setBounds(72, 52, 101, 29);
-		cxErro.add(btnErro);
 		
 		
-		
-		
+//Painel de login ==================================================================================================================================
 		
 		JLabel lblLogin = new JLabel("LOGIN");
 		lblLogin.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
@@ -112,6 +87,39 @@ public class Login extends JFrame {
 		txtSenha.setBounds(141, 147, 146, 26);
 		telaLogin.add(txtSenha);
 		
+		
+//Painel [Caso cliente erro os dados de login] =====================================================================================================
+		
+		JPanel cxErro = new JPanel();
+		cxErro.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+		cxErro.setVisible(false);
+		cxErro.setBounds(91, 73, 245, 97);
+		telaLogin.add(cxErro);
+		cxErro.setLayout(null);
+		
+		JLabel lblErro = new JLabel("Usuario ou senha incorreto");
+		lblErro.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblErro.setBounds(15, 16, 215, 20);
+		cxErro.add(lblErro);
+		
+		JButton btnErro = new JButton("Entendi");
+		btnErro.addActionListener(new ActionListener() {
+			
+			//Ação do botão
+			public void actionPerformed(ActionEvent arg0) {
+				cxErro.setVisible(false);
+				txtLogin.setText("");
+				txtSenha.setText("");
+			}
+		});
+		btnErro.setBorder(new LineBorder(Color.GRAY, 1, true));
+		btnErro.setFont(new Font("Tahoma", Font.BOLD, 16));
+		btnErro.setBounds(72, 52, 101, 29);
+		cxErro.add(btnErro);
+		
+		
+//Botão para Logar =================================================================================================================================
+		
 		JButton btnEntrar = new JButton("Entrar");
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -135,10 +143,13 @@ public class Login extends JFrame {
 				
 			}
 		});
+		
 		btnEntrar.setBorder(new LineBorder(new Color(128, 128, 128), 2, true));
 		btnEntrar.setFont(new Font("Tahoma", Font.BOLD, 20));
 		btnEntrar.setBounds(157, 189, 115, 29);
 		telaLogin.add(btnEntrar);
+		
+//Background ======================================================================================================================================
 		
 		JLabel Background = new JLabel("");
 		Background.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
