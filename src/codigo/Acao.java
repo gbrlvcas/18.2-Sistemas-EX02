@@ -13,9 +13,7 @@ public class Acao {
 		//Variaveis
 		int tipoLogin;
 		
-		//Instanciando [Classes: Login & Principal_Administrador]
-		Login l = new Login();
-		Principal_Administrador PADM = new Principal_Administrador();
+		
 		
 		//Validando
 		if(login.equals("admin") && senha.equals("admin")) {
